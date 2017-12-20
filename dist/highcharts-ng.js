@@ -17,12 +17,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 
   if (window && window.Highcharts) {
     Highcharts = window.Highcharts;
-  } else if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
-    module.exports === exports && module.exports === 'highcharts-ng'
-  ) {
-        Highcharts = require('highcharts');
+  } else if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === 'highcharts-ng') {
+    Highcharts = require('highcharts');
   }
-
 
   angular.module('highcharts-ng', [])
     .component('highchart', {
